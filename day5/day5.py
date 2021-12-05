@@ -17,16 +17,12 @@ def insert_or_increment(d, key):
 
 intersect_dict = dict()
 
-hor_vert_lines = []
-max_x = 0
-max_y = 0
-with open('test.txt', 'r') as in_file:
+with open('input.txt', 'r') as in_file:
   for line in in_file.readlines():
     string_list = line.strip().split(' -> ')
     start = list(map(int,string_list[0].split(',')))
     end = list(map(int,string_list[1].split(',')))
-    max_x = max(max_x, start[0], end[0])
-    max_y = max(max_y, start[1], end[1])
+
 
     if start[0] == end[0]:
       if start[1] <= end[1]:
